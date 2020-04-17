@@ -1,0 +1,26 @@
+body{
+    background-color: #e2b441;
+}
+
+.jumbotron, .card{
+    background-color:#f9e7aa;
+}
+
+.nav-link{
+    background-color:#cd212a;
+    color:white;
+}
+
+.nav-link:active, .nav-link:hover{
+    background-color:#008c45;
+    color:white;
+}
+
+.btn-primary{
+    background-color:#008c45;
+    border-color:#008c45;
+}
+
+h1{
+    font-family:'Lucida calligraphy';
+}
