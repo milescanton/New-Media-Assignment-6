@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>JavaScript Assignment</title>
+
+    <script>
+
+
+        function checkLength(){
+            var message = document.getElementById('bio').value;
+            var messageLength = message.length;
+
+            var email =  document.getElementById('email').value;
+            var emailLength = email.length;
+
+            var number = document.getElementById('number').value;
+            var numberLength = number.length;
+
+            if(messageLength > 250){
+                alert("Error: Text entry too long")
+            }
+            if(messageLength == 0 || emailLength == 0 || numberLength == 0){
+                alert("Error: Text entry missing")
+            }
+            
+            
+        }
+
+        function checkMath(){
+            
+            var number = document.getElementById('number').value;
+            var numberLength = number.length;
+
+            if(number != 14 && numberLength != 0){
+                alert("Error: Must answer question correctly to proceed")
+            }
+        }
+
+       
+        function checkEmail(){
+            var string = document.getElementById('email').value;
+            var stringLength = string.length;
+            var n = string.includes(("@" && ".com") || ("@" && ".org") || ("@" && ".edu"));
+
+            //couldnt get it to work for the .org and .edu but this was what I thought would work
+            
+            if(n != true && stringLength > 0){
+                alert("Error: Invalid email adress")
+            }
+
+        }
+        
+
+    </script>
+
+</head>
+
+<body>
+
+
+    Tell me about yourself (limit 250 characters):
+    <textarea id="bio" ></textarea>
+
+    <br /><br />
+
+    Enter your email:
+    <input id="email"></input>
+
+    <br /><br />
+
+    Answer for security reasons: 5 + 9 =
+    <input id="number"></input>
+
+    <br /><br />
+
+    <button onclick="checkLength(); checkMath(); checkEmail()">Submit</button>
+
+
+</body>
+
+</html>
